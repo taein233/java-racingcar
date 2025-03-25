@@ -39,36 +39,7 @@ class ApplicationTest extends NsTest {
     }
     @Override
     public void runMain() {
-        Scanner sc = new Scanner(System.in);
-        //System.out.println("경주할 자동차 이름을 입력하세요.");
-        String[] name = sc.next().split(",");
-        for(int k = 0; k < name.length; k++){
-            if(name[k].length() >= 5){
-                throw new IllegalArgumentException();
-            }
-        }
-        System.out.println("시도할 횟수는 몇번인가요?");
-        int input_num = sc.nextInt();
-        int[] name_add = new int[name.length];
-        int[] ans = new int[name.length];
-        for(int i = 0; i < input_num; i++) {
-            int[] arr_num = new int[name.length];
-            for(int j= 0; j < name.length; j++) {
-                arr_num[j] = Randoms.pickNumberInRange(0, 9);
-                if (arr_num[j] >= 4) {
-                    ans[j] += 1;
-                }
-                System.out.print(name[j] + " : ");
-                for (int k=0;k<ans[j];k++) {
-                    System.out.print("-");
-                }
-                System.out.println();
-            }
-            System.out.println();
-        }
-        for (int max = 0; max < name.length; max++) {
 
-        }
         Application.main(new String[]{});
 
     }
